@@ -380,7 +380,7 @@ export default function Survey() {
         <div className="text-xs text-center text-slate-400 font-bold">
           *ניתן לבחור במספר אופציות
         </div>
-        <div className="flex justify-center gap-2 mt-2 radio-buttons">
+        <div className="flex justify-between gap-2 mt-2 radio-buttons">
           {radioOptions.question4.map((option) => (
             <button
               key={option.value}
