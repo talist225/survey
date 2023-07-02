@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  direction: rtl !important;
+  background: #f8f8f8;
+}
+
+.selected-icon {
+  box-shadow: 0 0 0 3px black;
+}
+
+.textbox .textarea {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .radio-buttons {
+    padding: 5px;
+  }
+
+  .radio-buttons button {
+    font-size: 13px;
+  }
+
+  .text-box textarea {
+  }
+}
