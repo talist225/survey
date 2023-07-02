@@ -24,15 +24,10 @@ hr {
 @media only screen and (max-width: 600px) {
   .radio-buttons {
     padding: 5px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    gap: 5px;
   }
 
   .radio-buttons button {
     font-size: 13px;
-  }
-
-  .text-box textarea {
   }
 }

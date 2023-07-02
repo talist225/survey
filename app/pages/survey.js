@@ -58,9 +58,9 @@ export default function Survey() {
 
   const radioOptions = {
     question4: [
-      { label: "רמת הקליטה", value: "option1" },
+      { label: "איכות הקליטה", value: "option1" },
       { label: "שירות לקוחות", value: "option2" },
-      { label: "מחיר או גבייה", value: "option3" },
+      { label: "נושא פיננסי", value: "option3" },
       { label: "הצעה טובה יותר", value: "option4" },
     ],
   };
@@ -81,7 +81,7 @@ export default function Survey() {
       style: {
         border: "1px solid #fc40b2",
         padding: "16px",
-        color: "black",
+        color: "#000",
       },
       iconTheme: {
         primary: "#fc40b2",
@@ -220,9 +220,9 @@ export default function Survey() {
         סקר תודעת שירות
       </h1>
       <div className="mb-8">
-        <p className="font-bold text-center">
+        <div className="font-bold text-center">
           כמה את/ה מרוצה מהשירות שקיבלת מאיתנו?
-        </p>
+        </div>
         <div className="flex justify-center gap-2 mt-2">
           <button
             id="question1-thumbs-up"
@@ -272,7 +272,9 @@ export default function Survey() {
         </div>
       </div>
       <div className="mb-8">
-        <p className="font-bold text-center">האם התמורה למחיר הייתה הולמת?</p>
+        <div className="font-bold text-center">
+          האם התמורה למחיר הייתה הולמת?
+        </div>
         <div className="flex justify-center gap-2 mt-2">
           <button
             id="question2-star"
@@ -322,9 +324,9 @@ export default function Survey() {
         </div>
       </div>
       <div className="mb-8">
-        <p className="font-bold text-center">
+        <div className="font-bold text-center">
           מה שביעות רצונך מרמת הקליטה ברשת?
-        </p>
+        </div>
         <div className="flex justify-center gap-2 mt-2">
           <button
             id="question3-star"
@@ -374,10 +376,10 @@ export default function Survey() {
         </div>
       </div>
       <div className="mb-8">
-        <p className="font-bold text-center">נשמח לדעת מדוע בחרת לעזוב</p>
-        <p className="text-xs text-center text-slate-400 font-bold">
+        <div className="font-bold text-center">נשמח לדעת מדוע בחרת לעזוב</div>
+        <div className="text-xs text-center text-slate-400 font-bold">
           *ניתן לבחור במספר אופציות
-        </p>
+        </div>
         <div className="flex justify-center gap-2 mt-2 radio-buttons">
           {radioOptions.question4.map((option) => (
             <button
@@ -399,10 +401,10 @@ export default function Survey() {
       </div>
       <div className="textbox">
         <div className="text-center">
-          <p className="font-bold text-center">
+          <div className="font-bold text-center">
             טקסט חופשי{" "}
             <span className="text-xs text-slate-400">&nbsp;*אופציונלי</span>
-          </p>
+          </div>
           <textarea
             value={textInput}
             onChange={handleTextInputChange}
