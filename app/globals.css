@@ -7,6 +7,10 @@ body {
   background: #f8f8f8;
 }
 
+hr {
+  color: black !important;
+}
+
 .selected-icon {
   box-shadow: 0 0 0 3px black;
 }
@@ -20,6 +24,9 @@ body {
 @media only screen and (max-width: 600px) {
   .radio-buttons {
     padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .radio-buttons button {

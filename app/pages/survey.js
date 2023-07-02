@@ -16,6 +16,7 @@ import {
   BsEmojiWinkFill,
   BsEmojiAngryFill,
 } from "react-icons/bs";
+import { toast } from "react-hot-toast";
 
 export default function Survey() {
   const [answers, setAnswers] = useState({
@@ -75,6 +76,18 @@ export default function Survey() {
       question5: "",
     });
     setTextInput("");
+    toast.success("הסקר נשלח בהצלחה", {
+      duration: 4000,
+      style: {
+        border: "1px solid #fc40b2",
+        padding: "16px",
+        color: "black",
+      },
+      iconTheme: {
+        primary: "#fc40b2",
+        secondary: "#fff",
+      },
+    });
   };
 
   const buttonColors = {
@@ -203,7 +216,7 @@ export default function Survey() {
           alt="רמי לוי תקשורת"
         />
       </div>
-      <h1 className="text-2xl font-bold mb-4 text-[#fc40b2]">
+      <h1 className="text-2xl mb-4 font-extrabold text-[#fc40b2]">
         סקר תודעת שירות
       </h1>
       <div className="mb-8">
@@ -362,7 +375,9 @@ export default function Survey() {
       </div>
       <div className="mb-8">
         <p className="font-bold text-center">נשמח לדעת מדוע בחרת לעזוב</p>
-        <p className="text-sm text-center">*ניתן לבחור במספר אופציות</p>
+        <p className="text-xs text-center text-slate-400 font-bold">
+          *ניתן לבחור במספר אופציות
+        </p>
         <div className="flex justify-center gap-2 mt-2 radio-buttons">
           {radioOptions.question4.map((option) => (
             <button
